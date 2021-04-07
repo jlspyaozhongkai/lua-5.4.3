@@ -7,6 +7,8 @@
 #define llex_c
 #define LUA_CORE
 
+// luaµÄ´Ê·¨·ÖÎöÆ÷
+
 #include "lprefix.h"
 
 

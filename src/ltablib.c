@@ -7,6 +7,8 @@
 #define ltablib_c
 #define LUA_LIB
 
+// table ¿â
+
 #include "lprefix.h"
 
 

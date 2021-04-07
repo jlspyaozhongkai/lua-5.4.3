@@ -7,6 +7,8 @@
 #define ldblib_c
 #define LUA_LIB
 
+// lua µ÷ÊÔ¿â
+
 #include "lprefix.h"
 
 

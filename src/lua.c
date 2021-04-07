@@ -6,6 +6,8 @@
 
 #define lua_c
 
+// 也是具有main 函数的, 是lua 的交互程序
+
 #include "lprefix.h"
 
 

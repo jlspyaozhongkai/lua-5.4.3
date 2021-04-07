@@ -11,6 +11,8 @@
 #define loadlib_c
 #define LUA_LIB
 
+// 模块加载，require 也是在其中的
+
 #include "lprefix.h"
 
 

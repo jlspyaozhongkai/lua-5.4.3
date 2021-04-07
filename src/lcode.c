@@ -7,6 +7,8 @@
 #define lcode_c
 #define LUA_CORE
 
+// 生成字节码的
+
 #include "lprefix.h"
 
 

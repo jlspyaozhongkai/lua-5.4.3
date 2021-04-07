@@ -7,6 +7,8 @@
 #define lopcodes_c
 #define LUA_CORE
 
+// lua »úÆ÷Âë¶¨Òå
+
 #include "lprefix.h"
 
 

@@ -7,6 +7,8 @@
 #define ldo_c
 #define LUA_CORE
 
+// 函数调用前 和 调用后
+
 #include "lprefix.h"
 
 

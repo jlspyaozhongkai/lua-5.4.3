@@ -7,6 +7,8 @@
 #define lvm_c
 #define LUA_CORE
 
+// lua ÐéÄâ»ú
+
 #include "lprefix.h"
 
 #include <float.h>

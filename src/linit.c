@@ -40,20 +40,24 @@
 ** program
 */
 static const luaL_Reg loadedlibs[] = {
-  {LUA_GNAME, luaopen_base},
-  {LUA_LOADLIBNAME, luaopen_package},
-  {LUA_COLIBNAME, luaopen_coroutine},
-  {LUA_TABLIBNAME, luaopen_table},
-  {LUA_IOLIBNAME, luaopen_io},
-  {LUA_OSLIBNAME, luaopen_os},
-  {LUA_STRLIBNAME, luaopen_string},
-  {LUA_MATHLIBNAME, luaopen_math},
-  {LUA_UTF8LIBNAME, luaopen_utf8},
-  {LUA_DBLIBNAME, luaopen_debug},
+  {LUA_GNAME, luaopen_base},                          // 基础库
+  {LUA_LOADLIBNAME, luaopen_package},           // 包加载库
+  {LUA_COLIBNAME, luaopen_coroutine},             // 协程库       
+  {LUA_TABLIBNAME, luaopen_table},                  // table 库
+  {LUA_IOLIBNAME, luaopen_io},                         // io 库
+  {LUA_OSLIBNAME, luaopen_os},                        // os 库
+  {LUA_STRLIBNAME, luaopen_string},                  // 字符串库
+  {LUA_MATHLIBNAME, luaopen_math},                // 数学库
+  {LUA_UTF8LIBNAME, luaopen_utf8},                  // utf8 库
+  {LUA_DBLIBNAME, luaopen_debug},                  // 调试库
   {NULL, NULL}
 };
 
 
+/*
+初始化完了L 以后，要在要在其中luaL_openlibs
+否则虚拟机里就太空了
+*/
 LUALIB_API void luaL_openlibs (lua_State *L) {
   const luaL_Reg *lib;
   /* "require" functions from 'loadedlibs' and set results to global table */

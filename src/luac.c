@@ -7,6 +7,8 @@
 #define luac_c
 #define LUA_CORE
 
+// luac 中带有 main 函数的，是个编译工具
+
 #include "lprefix.h"
 
 #include <ctype.h>

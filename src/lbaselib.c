@@ -7,6 +7,8 @@
 #define lbaselib_c
 #define LUA_LIB
 
+// lua 脚本中，最最常调用的一些api
+
 #include "lprefix.h"
 
 

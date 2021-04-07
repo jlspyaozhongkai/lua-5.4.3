@@ -7,6 +7,8 @@
 #define lstrlib_c
 #define LUA_LIB
 
+// lua ×Ö·û´®¿â
+
 #include "lprefix.h"
 
 

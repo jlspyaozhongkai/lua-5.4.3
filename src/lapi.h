@@ -7,6 +7,8 @@
 #ifndef lapi_h
 #define lapi_h
 
+// lapi.c 中定义的接口，多在lua.h 中导出
+
 
 #include "llimits.h"
 #include "lstate.h"

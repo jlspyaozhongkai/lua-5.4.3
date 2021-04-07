@@ -8,6 +8,8 @@
 #ifndef lauxlib_h
 #define lauxlib_h
 
+// lua ¸¨Öú¿â
+
 
 #include <stddef.h>
 #include <stdio.h>
