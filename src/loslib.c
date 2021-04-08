@@ -7,7 +7,7 @@
 #define loslib_c
 #define LUA_LIB
 
-// os ¿â
+// os åº“
 
 #include "lprefix.h"
 

@@ -7,7 +7,7 @@
 #define liolib_c
 #define LUA_LIB
 
-// IO ¿â
+// IO åº“
 
 #include "lprefix.h"
 

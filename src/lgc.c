@@ -7,7 +7,7 @@
 #define lgc_c
 #define LUA_CORE
 
-// gc »ØÊÕ
+// gc å›žæ”¶
 
 #include "lprefix.h"
 

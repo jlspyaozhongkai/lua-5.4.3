@@ -40,23 +40,23 @@
 ** program
 */
 static const luaL_Reg loadedlibs[] = {
-  {LUA_GNAME, luaopen_base},                          // »ù´¡¿â
-  {LUA_LOADLIBNAME, luaopen_package},           // °ü¼ÓÔØ¿â
-  {LUA_COLIBNAME, luaopen_coroutine},             // Ğ­³Ì¿â       
-  {LUA_TABLIBNAME, luaopen_table},                  // table ¿â
-  {LUA_IOLIBNAME, luaopen_io},                         // io ¿â
-  {LUA_OSLIBNAME, luaopen_os},                        // os ¿â
-  {LUA_STRLIBNAME, luaopen_string},                  // ×Ö·û´®¿â
-  {LUA_MATHLIBNAME, luaopen_math},                // ÊıÑ§¿â
-  {LUA_UTF8LIBNAME, luaopen_utf8},                  // utf8 ¿â
-  {LUA_DBLIBNAME, luaopen_debug},                  // µ÷ÊÔ¿â
+  {LUA_GNAME, luaopen_base},                          // åŸºç¡€åº“
+  {LUA_LOADLIBNAME, luaopen_package},           // åŒ…åŠ è½½åº“
+  {LUA_COLIBNAME, luaopen_coroutine},             // åç¨‹åº“       
+  {LUA_TABLIBNAME, luaopen_table},                  // table åº“
+  {LUA_IOLIBNAME, luaopen_io},                         // io åº“
+  {LUA_OSLIBNAME, luaopen_os},                        // os åº“
+  {LUA_STRLIBNAME, luaopen_string},                  // å­—ç¬¦ä¸²åº“
+  {LUA_MATHLIBNAME, luaopen_math},                // æ•°å­¦åº“
+  {LUA_UTF8LIBNAME, luaopen_utf8},                  // utf8 åº“
+  {LUA_DBLIBNAME, luaopen_debug},                  // è°ƒè¯•åº“
   {NULL, NULL}
 };
 
 
 /*
-³õÊ¼»¯ÍêÁËL ÒÔºó£¬ÒªÔÚÒªÔÚÆäÖĞluaL_openlibs
-·ñÔòĞéÄâ»úÀï¾ÍÌ«¿ÕÁË
+åˆå§‹åŒ–å®Œäº†L ä»¥åï¼Œè¦åœ¨è¦åœ¨å…¶ä¸­luaL_openlibs
+å¦åˆ™è™šæ‹Ÿæœºé‡Œå°±å¤ªç©ºäº†
 */
 LUALIB_API void luaL_openlibs (lua_State *L) {
   const luaL_Reg *lib;

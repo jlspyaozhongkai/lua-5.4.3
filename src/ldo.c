@@ -7,7 +7,7 @@
 #define ldo_c
 #define LUA_CORE
 
-// º¯Êıµ÷ÓÃÇ° ºÍ µ÷ÓÃºó
+// å‡½æ•°è°ƒç”¨å‰ å’Œ è°ƒç”¨å
 
 #include "lprefix.h"
 

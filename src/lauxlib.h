@@ -8,7 +8,7 @@
 #ifndef lauxlib_h
 #define lauxlib_h
 
-// lua ¸¨Öú¿â
+// lua è¾…åŠ©åº“
 
 
 #include <stddef.h>

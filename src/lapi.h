@@ -7,7 +7,7 @@
 #ifndef lapi_h
 #define lapi_h
 
-// lapi.c ÖĞ¶¨ÒåµÄ½Ó¿Ú£¬¶àÔÚlua.h ÖĞµ¼³ö
+// lapi.c ä¸­å®šä¹‰çš„æ¥å£ï¼Œå¤šåœ¨lua.h ä¸­å¯¼å‡º
 
 
 #include "llimits.h"

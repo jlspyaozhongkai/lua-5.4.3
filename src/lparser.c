@@ -7,7 +7,7 @@
 #define lparser_c
 #define LUA_CORE
 
-// luaµÄÓï·¨·ÖÎöÆ÷
+// luaçš„è¯­æ³•åˆ†æå™¨
 
 #include "lprefix.h"
 

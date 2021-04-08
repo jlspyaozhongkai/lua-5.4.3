@@ -7,7 +7,7 @@
 #define lutf8lib_c
 #define LUA_LIB
 
-// utf8 ¿â
+// utf8 åº“
 
 #include "lprefix.h"
 

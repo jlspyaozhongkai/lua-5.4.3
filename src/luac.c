@@ -7,7 +7,7 @@
 #define luac_c
 #define LUA_CORE
 
-// luac ÖÐ´øÓÐ main º¯ÊýµÄ£¬ÊÇ¸ö±àÒë¹¤¾ß
+// luac ä¸­å¸¦æœ‰ main å‡½æ•°çš„ï¼Œæ˜¯ä¸ªç¼–è¯‘å·¥å…·
 
 #include "lprefix.h"
 

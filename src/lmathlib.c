@@ -7,7 +7,7 @@
 #define lmathlib_c
 #define LUA_LIB
 
-// lua ÊýÑ§¿â
+// lua æ•°å­¦åº“
 
 #include "lprefix.h"
 
