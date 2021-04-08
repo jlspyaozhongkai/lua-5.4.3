@@ -16,6 +16,7 @@
 ** Memory-allocation error message must be preallocated (it cannot
 ** be created after memory is exhausted)
 */
+// 啥玩意
 #define MEMERRMSG       "not enough memory"
 
 
@@ -23,8 +24,10 @@
 ** Size of a TString: Size of the header plus space for the string
 ** itself (including final '\0').
 */
+// 这个是计算字符串 带上包装以后的长度
 #define sizelstring(l)  (offsetof(TString, contents) + ((l) + 1) * sizeof(char))
 
+// 字面量，且 "" 这个后面不跟字面量 的话 会直接编译不过
 #define luaS_newliteral(L, s)	(luaS_newlstr(L, "" s, \
                                  (sizeof(s)/sizeof(char))-1))
 
@@ -32,12 +35,14 @@
 /*
 ** test whether a string is a reserved word
 */
+// 是否为保留 字符串
 #define isreserved(s)	((s)->tt == LUA_VSHRSTR && (s)->extra > 0)
 
 
 /*
 ** equality for short strings, which are always internalized
 */
+// 字符串的比较
 #define eqshrstr(a,b)	check_exp((a)->tt == LUA_VSHRSTR, (a) == (b))
 
 

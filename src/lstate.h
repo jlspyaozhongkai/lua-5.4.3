@@ -345,6 +345,7 @@ struct lua_State {
 ** part of any of them anywhere that a declaration of the complete type
 ** of the union is visible."
 */
+// 各种GC 类型对象的大Union，他们的共同点是都有一个 CommonHeader (包括 GCObject)
 union GCUnion {
   GCObject gc;  /* common header */
   struct TString ts;
@@ -365,8 +366,10 @@ union GCUnion {
 #define cast_u(o)	cast(union GCUnion *, (o))
 
 /* macros to convert a GCObject into a specific value */
+// GC Object to TString, 先检查其是一个String，然后将其转换成 GCUnion 再取对应的成员
 #define gco2ts(o)  \
 	check_exp(novariant((o)->tt) == LUA_TSTRING, &((cast_u(o))->ts))
+
 #define gco2u(o)  check_exp((o)->tt == LUA_VUSERDATA, &((cast_u(o))->u))
 #define gco2lcl(o)  check_exp((o)->tt == LUA_VLCL, &((cast_u(o))->cl.l))
 #define gco2ccl(o)  check_exp((o)->tt == LUA_VCCL, &((cast_u(o))->cl.c))

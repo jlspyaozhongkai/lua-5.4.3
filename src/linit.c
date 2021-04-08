@@ -41,15 +41,15 @@
 */
 static const luaL_Reg loadedlibs[] = {
   {LUA_GNAME, luaopen_base},                          // 基础库
-  {LUA_LOADLIBNAME, luaopen_package},           // 包加载库
-  {LUA_COLIBNAME, luaopen_coroutine},             // 协程库       
-  {LUA_TABLIBNAME, luaopen_table},                  // table 库
-  {LUA_IOLIBNAME, luaopen_io},                         // io 库
-  {LUA_OSLIBNAME, luaopen_os},                        // os 库
-  {LUA_STRLIBNAME, luaopen_string},                  // 字符串库
-  {LUA_MATHLIBNAME, luaopen_math},                // 数学库
-  {LUA_UTF8LIBNAME, luaopen_utf8},                  // utf8 库
-  {LUA_DBLIBNAME, luaopen_debug},                  // 调试库
+  {LUA_LOADLIBNAME, luaopen_package},                 // 包加载库
+  {LUA_COLIBNAME, luaopen_coroutine},                 // 协程库       
+  {LUA_TABLIBNAME, luaopen_table},                    // table 库
+  {LUA_IOLIBNAME, luaopen_io},                        // io 库
+  {LUA_OSLIBNAME, luaopen_os},                         // os 库
+  {LUA_STRLIBNAME, luaopen_string},                   // 字符串库
+  {LUA_MATHLIBNAME, luaopen_math},                    // 数学库
+  {LUA_UTF8LIBNAME, luaopen_utf8},                    // utf8 库
+  {LUA_DBLIBNAME, luaopen_debug},                     // 调试库
   {NULL, NULL}
 };
 

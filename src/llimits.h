@@ -90,17 +90,17 @@ typedef LUAI_UACINT l_uacInt;
 #if defined LUAI_ASSERT
 #undef NDEBUG
 #include <assert.h>
-#define lua_assert(c)           assert(c)
+#define lua_assert(c)           assert(c)           // 断言
 #endif
 
 #if defined(lua_assert)
-#define check_exp(c,e)		(lua_assert(c), (e))
+#define check_exp(c,e)		(lua_assert(c), (e))      // 结果为e，且先对c表达式进行断言检查
 /* to avoid problems with conditions too long */
-#define lua_longassert(c)	((c) ? (void)0 : lua_assert(0))
+#define lua_longassert(c)	((c) ? (void)0 : lua_assert(0))  // 断言，输入条件是个long ？
 #else
 #define lua_assert(c)		((void)0)
-#define check_exp(c,e)		(e)
-#define lua_longassert(c)	((void)0)
+#define check_exp(c,e)		(e)                       // 这个时机上是放弃了对c表达式的assert检查
+#define lua_longassert(c)	((void)0)                 // 断言  放弃了
 #endif
 
 /*
@@ -120,11 +120,11 @@ typedef LUAI_UACINT l_uacInt;
 
 
 /* type casts (a macro highlights casts in the code) */
-#define cast(t, exp)	((t)(exp))
+#define cast(t, exp)	((t)(exp))                       // 类型转换，强制转换
 
 #define cast_void(i)	cast(void, (i))
 #define cast_voidp(i)	cast(void *, (i))
-#define cast_num(i)	cast(lua_Number, (i))
+#define cast_num(i)	cast(lua_Number, (i))              // 强制转了 设定的lua number，默认是double类型的
 #define cast_int(i)	cast(int, (i))
 #define cast_uint(i)	cast(unsigned int, (i))
 #define cast_byte(i)	cast(lu_byte, (i))
