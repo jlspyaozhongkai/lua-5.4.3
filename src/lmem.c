@@ -159,6 +159,7 @@ static void *tryagain (lua_State *L, void *block,
 /*
 ** Generic allocation routine.
 */
+// realloc 内存 .....
 void *luaM_realloc_ (lua_State *L, void *block, size_t osize, size_t nsize) {
   void *newblock;
   global_State *g = G(L);

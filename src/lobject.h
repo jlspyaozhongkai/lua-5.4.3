@@ -431,10 +431,10 @@ typedef struct GCObject {
 */
 typedef struct TString {
   CommonHeader;                                    //
-  lu_byte extra;  /* reserved words for short strings; "has hash" for longs */
+  lu_byte extra;  /* reserved words for short strings; "has hash" for longs */   // 是否有hash的标志
   lu_byte shrlen;  /* length for short strings */  // 数据长度
   unsigned int hash;                               // hash值
-  union {
+  union {                                          // 长短共用
     size_t lnglen;  /* length for long strings */              // 长string的长度
     struct TString *hnext;  /* linked list for hash table */   // hash 链表
   } u;

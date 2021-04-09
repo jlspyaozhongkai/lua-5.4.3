@@ -41,6 +41,7 @@
 ** when multiplied by the size of type 't'. (Assumes that 'n' is an
 ** 'int' or 'unsigned int' and that 'int' is not larger than 'size_t'.)
 */
+// 指定的n 或者 最大size/sizeof(xx) 的取小
 #define luaM_limitN(n,t)  \
   ((cast_sizet(n) <= MAX_SIZET/sizeof(t)) ? (n) :  \
      cast_uint((MAX_SIZET/sizeof(t))))
@@ -57,6 +58,8 @@
 #define luaM_freearray(L, b, n)   luaM_free_(L, (b), (n)*sizeof(*(b)))
 
 #define luaM_new(L,t)		cast(t*, luaM_malloc_(L, sizeof(t), 0))
+
+// 分配内存，有数量，有类型(算长度用)
 #define luaM_newvector(L,n,t)	cast(t*, luaM_malloc_(L, (n)*sizeof(t), 0))
 #define luaM_newvectorchecked(L,n,t) \
   (luaM_checksize(L,n,sizeof(t)), luaM_newvector(L,n,t))
@@ -67,6 +70,7 @@
 	((v)=cast(t *, luaM_growaux_(L,v,nelems,&(size),sizeof(t), \
                          luaM_limitN(limit,t),e)))
 
+// realloc
 #define luaM_reallocvector(L, v,oldn,n,t) \
    (cast(t *, luaM_realloc_(L, v, cast_sizet(oldn) * sizeof(t), \
                                   cast_sizet(n) * sizeof(t))))

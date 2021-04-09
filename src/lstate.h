@@ -147,10 +147,11 @@ struct lua_longjmp;  /* defined in ldo.c */
 #define KGC_GEN		1	/* generational gc */
 
 
+// state 的字符串表
 typedef struct stringtable {
-  TString **hash;
-  int nuse;  /* number of elements */
-  int size;
+  TString **hash;                             // hash表
+  int nuse;  /* number of elements */         // 内含字符串的数量
+  int size;                                   // hash表size
 } stringtable;
 
 
@@ -253,10 +254,10 @@ typedef struct global_State {
   l_mem GCdebt;  /* bytes allocated not yet compensated by the collector */
   lu_mem GCestimate;  /* an estimate of the non-garbage memory in use */
   lu_mem lastatomic;  /* see function 'genstep' in file 'lgc.c' */
-  stringtable strt;  /* hash table for strings */
+  stringtable strt;  /* hash table for strings */                      // 字符串表
   TValue l_registry;
   TValue nilvalue;  /* a nil value */
-  unsigned int seed;  /* randomized seed for hashes */
+  unsigned int seed;  /* randomized seed for hashes */                 // hash的随机数，降低碰撞？
   lu_byte currentwhite;
   lu_byte gcstate;  /* state of garbage collector */
   lu_byte gckind;  /* kind of GC running */
@@ -289,13 +290,14 @@ typedef struct global_State {
   struct lua_State *twups;  /* list of threads with open upvalues */
   lua_CFunction panic;  /* to be called in unprotected errors */
   struct lua_State *mainthread;
-  TString *memerrmsg;  /* message for memory-allocation errors */
+  TString *memerrmsg;  /* message for memory-allocation errors */   // 预先分配好的，内存分配失败消息
   TString *tmname[TM_N];  /* array with tag-method names */
   struct Table *mt[LUA_NUMTAGS];  /* metatables for basic types */
   TString *strcache[STRCACHE_N][STRCACHE_M];  /* cache for strings in API */
   lua_WarnFunction warnf;  /* warning function */
   void *ud_warn;         /* auxiliary data to 'warnf' */
 } global_State;
+// state 的全局这，全局那
 
 
 /*
@@ -307,7 +309,7 @@ struct lua_State {
   lu_byte allowhook;
   unsigned short nci;  /* number of items in 'ci' list */
   StkId top;  /* first free slot in the stack */
-  global_State *l_G;
+  global_State *l_G;                                              // 他的那个全局
   CallInfo *ci;  /* call info for current function */
   StkId stack_last;  /* end of stack (last element + 1) */
   StkId stack;  /* stack base */
@@ -326,7 +328,7 @@ struct lua_State {
   volatile l_signalT hookmask;
 };
 
-
+// state 的G
 #define G(L)	(L->l_G)
 
 /*

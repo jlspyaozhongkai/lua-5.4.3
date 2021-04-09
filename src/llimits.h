@@ -186,7 +186,7 @@ typedef l_uint32 Instruction;
 ** #("function") = 8, #("__newindex") = 10.)
 */
 #if !defined(LUAI_MAXSHORTLEN)
-#define LUAI_MAXSHORTLEN	40
+#define LUAI_MAXSHORTLEN	40             // 短字符串最大长度
 #endif
 
 
@@ -197,7 +197,7 @@ typedef l_uint32 Instruction;
 ** a few dozens more.
 */
 #if !defined(MINSTRTABSIZE)
-#define MINSTRTABSIZE	128
+#define MINSTRTABSIZE	128               // 字符串表，起始长度
 #endif
 
 
@@ -207,8 +207,8 @@ typedef l_uint32 Instruction;
 ** makes a direct cache.)
 */
 #if !defined(STRCACHE_N)
-#define STRCACHE_N		53
-#define STRCACHE_M		2
+#define STRCACHE_N		53             // cache hash
+#define STRCACHE_M		2              // hash 冲突联，非常短，多余的顶出
 #endif
 
 
